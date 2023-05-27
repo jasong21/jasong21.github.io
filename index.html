@@ -51,11 +51,13 @@ testClassDiv.innerHTML = testText.replace(/click me.+?functionality/i, "I was cl
   <option value="individual_match_flight_d">Individual Match Flight D</option>
 </select>
 <script>
- // Get the selected value from the drop-down list
-var selectedMatch = document.getElementById("matchSelection").value;
+ var outputElement = document.getElementById("output");
+var matchSelectionElement = document.getElementById("matchSelection");
 
-// Use the selected value for further processing
-console.log(selectedMatch); // Print the selected value to the console
-// You can perform other operations or use the selected value as needed
+matchSelectionElement.addEventListener("change", function() {
+  var selectedMatch = matchSelectionElement.value;
+  outputElement.innerHTML = "Selected Match: " + selectedMatch;
+});
+
     </script>
 </html>
