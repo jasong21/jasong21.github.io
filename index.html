@@ -41,7 +41,7 @@ testClassDiv.innerHTML = testText.replace(/click me.+?functionality/i, "I was cl
 }
 </script>
 </body>
-<select>
+<select id="matchSelection"> 
   <option value="team_match_a">Team Match A</option>
   <option value="team_match_b">Team Match B</option>
   <option value="individual_match_gross">Individual Match - Gross</option>
@@ -50,4 +50,12 @@ testClassDiv.innerHTML = testText.replace(/click me.+?functionality/i, "I was cl
   <option value="individual_match_flight_c">Individual Match Flight C</option>
   <option value="individual_match_flight_d">Individual Match Flight D</option>
 </select>
+
+ // Get the selected value from the drop-down list
+var selectedMatch = document.getElementById("matchSelection").value;
+
+// Use the selected value for further processing
+console.log(selectedMatch); // Print the selected value to the console
+// You can perform other operations or use the selected value as needed
+
 </html>
